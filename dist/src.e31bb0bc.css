@@ -1,0 +1,27 @@
+.App {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  padding: 2em;
+}
+
+body {
+  background: #232323;
+  /* display: flex;
+  justify-content: center;
+  margin: 0; */
+}
+
+.ButtonHolder {
+  width: 100%;
+  background-color: red;
+}
+
+.GenerateButton {
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+  margin-left: 40%;
+}
+
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */
