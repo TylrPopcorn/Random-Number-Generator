@@ -1,24 +1,39 @@
+html,
+body {
+  min-height: 100vh;
+  background: #232323;
+  color: #ffffff;
+}
+
+#root,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root h1 {
+  font-size: 40px;
+  margin-top: 30px;
+  font-weight: bold;
+  color: rgb(195, 0, 202);
+  font-family: "Times New Roman";
+}
+
 .App {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   padding: 2em;
 }
 
-body {
-  background: #232323;
-  /* display: flex;
-  justify-content: center;
-  margin: 0; */
-}
-
 .ButtonHolder {
-  width: 100%;
   background-color: red;
+  width: 100%; /* Stretch across the whole screen */
+  height: 50%;
 }
 
 .GenerateButton {
   background-color: #000000;
   color: white;
   border-radius: 5px;
-  margin-left: 40%;
 }
