@@ -18,7 +18,9 @@ function App() {
           Generate
         </button>
       </div>
-      <p>Click the button above to generate a random number</p>
+      <div className="BottomFrame">
+        <p>Click the button above to generate a random number</p>
+      </div>
     </div>
   );
 }
