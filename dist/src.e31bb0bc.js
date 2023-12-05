@@ -28978,7 +28978,9 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement("button", {
     className: "GenerateButton",
     onClick: generateNumber
-  }, "Generate")), /*#__PURE__*/_react.default.createElement("p", null, "Click the button above to generate a random number"));
+  }, "Generate")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "BottomFrame"
+  }, /*#__PURE__*/_react.default.createElement("p", null, "Click the button above to generate a random number")));
 }
 var _default = exports.default = App;
 },{"react":"../node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
@@ -29023,7 +29025,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62076" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56273" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

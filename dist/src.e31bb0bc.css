@@ -1,7 +1,7 @@
 html,
 body {
   min-height: 100vh;
-  background: #232323;
+  background: #111111;
   color: #ffffff;
 }
 
@@ -18,6 +18,8 @@ body {
   font-weight: bold;
   color: rgb(195, 0, 202);
   font-family: "Times New Roman";
+  -webkit-text-stroke: 0.4px #000000;
+  text-shadow: 0px 0px 15px rgb(196, 74, 245);
 }
 
 .App {
@@ -26,16 +28,26 @@ body {
   padding: 2em;
 }
 
+.NumberArea {
+  background-color: green;
+  height: 90px;
+  text-align: center;
+}
+
+.NumberArea p {
+}
+
 .ButtonHolder {
   background-color: red;
   width: 100%; /* Stretch across the whole screen */
-  height: 50%;
 }
 
 .GenerateButton {
   background-color: #000000;
   color: white;
   border-radius: 5px;
+  height: 30px;
+  width: 90%;
 }
 
 
