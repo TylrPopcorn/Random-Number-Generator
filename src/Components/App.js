@@ -9,7 +9,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div id="wrapper" className="App">
       <div className="NumberArea">
         <p>{num}</p>
       </div>

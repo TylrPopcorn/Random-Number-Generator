@@ -28970,6 +28970,7 @@ function App() {
     setNum(randomNumber);
   };
   return /*#__PURE__*/_react.default.createElement("div", {
+    id: "wrapper",
     className: "App"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "NumberArea"

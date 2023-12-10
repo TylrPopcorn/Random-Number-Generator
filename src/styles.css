@@ -5,6 +5,10 @@ body {
   color: #ffffff;
 }
 
+:root {
+  --width-s: 30%;
+}
+
 #root,
 #wrapper {
   display: flex;
@@ -26,20 +30,28 @@ body {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   padding: 2em;
+  font-weight: bold;
+  width: 100%;
+  height: 100vh;
+  background-color: blue;
 }
 
 .NumberArea {
+  margin-top: 5%;
   background-color: green;
-  height: 90px;
-  text-align: center;
-}
+  height: 30%;
+  width: calc(var(--width-s) - 20%);
+  border-radius: 100%;
 
-.NumberArea p {
+  /* Centering text vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ButtonHolder {
   background-color: red;
-  width: 100%; /* Stretch across the whole screen */
+  width: var(--width-s); /* Stretch across the whole screen */
 }
 
 .GenerateButton {
