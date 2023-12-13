@@ -28970,6 +28970,7 @@ function App() {
     setNum(randomNumber);
   };
   return /*#__PURE__*/_react.default.createElement("div", {
+    id: "wrapper",
     className: "App"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "NumberArea"
@@ -29025,7 +29026,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56273" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59175" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
