@@ -1,12 +1,19 @@
+/* VARIABLES: */
+/* -- */
+:root {
+  --width-s: 30%;
+  --text-stroke-color: rgb(196, 74, 245);
+}
+/* -- */
+/* -- */
+/* ---------------- */
+
 html,
 body {
   min-height: 100vh;
   background: #111111;
   color: #ffffff;
-}
-
-:root {
-  --width-s: 30%;
+  font-family: "Roboto", sans-serif;
 }
 
 #root,
@@ -16,24 +23,33 @@ body {
   align-items: center;
 }
 
+@keyframes glowing {
+  0% {
+    text-shadow: 0px 0px 15px var(--text-stroke-color);
+  }
+  50% {
+    text-shadow: 0px 0px 30px var(--text-stroke-color);
+  }
+  100% {
+    text-shadow: 0px 0px 15px var(--text-stroke-color);
+  }
+}
+
 #root h1 {
-  font-size: 40px;
-  margin-top: 30px;
+  font-size: 60px;
+  margin-top: 3%;
   font-weight: bold;
   color: rgb(195, 0, 202);
-  font-family: "Times New Roman";
   -webkit-text-stroke: 0.4px #000000;
-  text-shadow: 0px 0px 15px rgb(196, 74, 245);
+  animation: glowing 8s infinite; /* Adjust the duration as needed */
 }
 
 .App {
-  font-family: "Times New Roman", Times, serif;
   text-align: center;
   padding: 2em;
   font-weight: bold;
   width: 100%;
   height: 100vh;
-  background-color: blue;
 }
 
 .NumberArea {
@@ -43,6 +59,13 @@ body {
   width: calc(var(--width-s) - 15%);
   border-radius: 100%;
   font-size: 100px;
+  box-shadow: 0px 0px 30px rgba(4, 221, 69, 0.5); /* Adjust the shadow as needed */
+
+  /* background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 70%
+  ); */
 
   /* Centering text vertically and horizontally */
   display: flex;
@@ -53,15 +76,20 @@ body {
 .ButtonHolder {
   margin-top: 3%;
   background-color: red;
+  height: 10%;
   width: var(--width-s); /* Stretch across the whole screen */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .GenerateButton {
-  background-color: #000000;
-  color: white;
+  background-color: #333333;
+  color: rgb(68, 240, 46);
   border-radius: 5px;
-  height: 30px;
-  width: 90%;
+  height: 50%;
+  width: 60%;
 }
 
 

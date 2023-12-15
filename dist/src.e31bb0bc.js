@@ -29000,7 +29000,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //functions:
 
 var root = _client.default.createRoot(document.getElementById("root"));
-root.render( /*#__PURE__*/_react.default.createElement(_react.default.StrictMode, null, /*#__PURE__*/_react.default.createElement("h1", null, "NUMBER GENERATOR"), /*#__PURE__*/_react.default.createElement(_App.default, null)));
+root.render( /*#__PURE__*/_react.default.createElement(_react.default.StrictMode, null, /*#__PURE__*/_react.default.createElement("h1", null, "NUMBER GENERATOR"), /*#__PURE__*/_react.default.createElement("h2", null, " Generate a random number "), /*#__PURE__*/_react.default.createElement(_App.default, null)));
 },{"react":"../node_modules/react/index.js","react-dom/client":"../node_modules/react-dom/client.js","./styles.css":"styles.css","./Components/App":"Components/App.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
