@@ -10,10 +10,13 @@
 
 html,
 body {
+  /* min-width: 100vh; */
   min-height: 100vh;
   background: #111111;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 #root,
@@ -21,6 +24,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes glowing {
@@ -42,6 +47,12 @@ body {
   color: rgb(195, 0, 202);
   -webkit-text-stroke: 0.4px #000000;
   animation: glowing 8s infinite; /* Adjust the duration as needed */
+  z-index: 2;
+}
+
+#root h2 {
+  background-color: red;
+  /* margin-top: -40px; */
 }
 
 .App {
@@ -49,13 +60,15 @@ body {
   padding: 2em;
   font-weight: bold;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .NumberArea {
   margin-top: 3%;
   background-color: green;
-  height: 35%;
+  height: 15vw;
   width: calc(var(--width-s) - 15%);
   border-radius: 100%;
   font-size: 100px;
