@@ -3,6 +3,7 @@
 :root {
   --width-s: 30%;
   --text-stroke-color: rgb(196, 74, 245);
+  --main-text-color: rgb(212, 121, 248);
 }
 /* -- */
 /* -- */
@@ -44,7 +45,7 @@ body {
   font-size: 60px;
   margin-top: 3%;
   font-weight: bold;
-  color: rgb(195, 0, 202);
+  color: var(--main-text-color);
   -webkit-text-stroke: 0.4px #000000;
   animation: glowing 8s infinite; /* Adjust the duration as needed */
   z-index: 2;
@@ -52,7 +53,8 @@ body {
 
 #root h2 {
   background-color: red;
-  /* margin-top: -40px; */
+  margin-top: -40px;
+  color: var(--main-text-color);
 }
 
 .App {
@@ -66,7 +68,7 @@ body {
 }
 
 .NumberArea {
-  margin-top: 3%;
+  margin-top: 5%;
   background-color: green;
   height: 15vw;
   width: calc(var(--width-s) - 15%);
@@ -88,8 +90,9 @@ body {
 
 .ButtonHolder {
   margin-top: 3%;
-  background-color: red;
-  height: 10%;
+  border-radius: 20px;
+  /* background-color: rgb(53, 52, 52); */
+  height: 8vh;
   width: var(--width-s); /* Stretch across the whole screen */
 
   display: flex;
