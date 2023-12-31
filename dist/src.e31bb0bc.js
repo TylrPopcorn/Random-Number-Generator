@@ -28966,8 +28966,17 @@ function App() {
     num = _useState2[0],
     setNum = _useState2[1];
   var generateNumber = function generateNumber() {
+    var NumberArea = document.querySelector(".NumberArea");
     var randomNumber = Math.floor(Math.random() * 100) + 1;
     setNum(randomNumber);
+
+    // Add the 'shadowed' class to trigger the transition
+    NumberArea.classList.add("shadowed");
+
+    // Remove the 'shadowed' class after the transition completes
+    setTimeout(function () {
+      NumberArea.classList.remove("shadowed");
+    }, 1000);
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "wrapper",

@@ -4,8 +4,17 @@ function App() {
   const [num, setNum] = useState(0);
 
   const generateNumber = () => {
+    const NumberArea = document.querySelector(".NumberArea");
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     setNum(randomNumber);
+
+    // Add the 'shadowed' class to trigger the transition
+    NumberArea.classList.add("shadowed");
+
+    // Remove the 'shadowed' class after the transition completes
+    setTimeout(() => {
+      NumberArea.classList.remove("shadowed");
+    }, 1000);
   };
 
   return (
