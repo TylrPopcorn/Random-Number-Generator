@@ -2,8 +2,8 @@
 /* -- */
 :root {
   --width-s: 30%;
-  --text-stroke-color: rgb(196, 74, 245);
-  --main-text-color: rgb(212, 121, 248);
+  --text-stroke-color: rgb(188, 78, 231);
+  --main-text-color: rgb(191, 60, 243);
 }
 /* -- */
 /* -- */
@@ -41,7 +41,31 @@ body {
   }
 }
 
-#root h1 {
+/*CREDIT: https://www.youtube.com/watch?v=4PbgtyE0mGs*/
+#root .title::before {
+  content: attr(data-text);
+  position: absolute;
+  color: #ffffff;
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  /* border-right: 4px solid #fff; */
+  animation: animate 8s linear forwards 2s;
+}
+@keyframes animate {
+  0% {
+    width: 0%;
+  }
+  10% {
+    width: 0%;
+  }
+  70%,
+  100% {
+    width: 45%;
+  }
+}
+
+#root .title {
   font-size: 60px;
   margin-top: 3%;
   font-weight: bold;
@@ -52,7 +76,7 @@ body {
 }
 
 #root h2 {
-  background-color: red;
+  /* background-color: red; */
   margin-top: -40px;
   color: var(--main-text-color);
 }
@@ -69,18 +93,18 @@ body {
 
 .NumberArea {
   margin-top: 5%;
-  background-color: green;
+  /* background-color: var(--main-text-color); */
   height: 15vw;
   width: calc(var(--width-s) - 15%);
   border-radius: 100%;
   font-size: 100px;
-  box-shadow: 0px 0px 30px rgba(4, 221, 69, 0.5); /* Adjust the shadow as needed */
+  box-shadow: 0px 0px 30px var(--main-text-color); /* Adjust the shadow as needed */
 
-  /* background: radial-gradient(
+  background: radial-gradient(
     ellipse at center,
-    rgba(255, 255, 255, 0.8) 0%,
-    rgba(255, 255, 255, 0) 70%
-  ); */
+    var(--main-text-color) 0%,
+    rgba(19, 240, 85, 0) 70%
+  );
 
   /* Centering text vertically and horizontally */
   display: flex;
@@ -102,10 +126,15 @@ body {
 
 .GenerateButton {
   background-color: #333333;
-  color: rgb(68, 240, 46);
+  color: var(--main-text-color);
   border-radius: 5px;
   height: 50%;
   width: 60%;
+}
+
+.BottomFrame {
+  margin-top: -1.5%;
+  color: var(--main-text-color);
 }
 
 
