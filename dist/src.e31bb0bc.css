@@ -1,8 +1,8 @@
 /* [VARIABLES:] */
 :root {
   --width-s: 30%;
-  --text-stroke-color: rgb(221, 231, 78);
-  --main-text-color: rgb(225, 243, 60);
+  --text-stroke-color: rgb(78, 208, 231);
+  --main-text-color: rgb(60, 243, 188);
 }
 /* ---------- */
 /* ---------------- */
@@ -106,10 +106,12 @@ body {
   width: calc(var(--width-s) - 15%);
   font-size: 15vh;
 
+  text-shadow: 0px 0px 5px #000, /* Black text stroke */ 0px 0px 2px #000;
+
   border-radius: 100%;
   border: 2px solid var(--main-text-color);
 
-  box-shadow: 0px 0px 10px var(--main-text-color);
+  box-shadow: 0px 0px 2.5vh var(--main-text-color);
   transition: box-shadow 1s ease;
 
   /* background-color: var(--main-text-color); */
@@ -126,8 +128,17 @@ body {
 }
 
 .NumberArea.shadowed {
-  box-shadow: 0px 0px 30px var(--main-text-color); /* Updated box-shadow */
+  box-shadow: 0px 0px 7vh var(--main-text-color); /* Updated box-shadow */
   border: 2px solid var(--main-text-color); /* Updated border color */
+}
+
+.NumberArea .randomNumber {
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Add a transition for a smoother effect */
+}
+
+.NumberArea .randomNumber.fade {
+  opacity: 1;
 }
 
 .ButtonHolder {
@@ -147,12 +158,14 @@ body {
 }
 
 .GenerateButton {
-  background-color: #333333;
+  background-color: #272727;
   color: var(--main-text-color);
   border-radius: 5px;
   height: 50%;
+  font-size: 1em;
   width: 60%;
-  transition: box-shadow 0.1s ease; /* Add a transition for box-shadow */
+  box-shadow: 0 0 0 var(--main-text-color);
+  transition: box-shadow 0.2s ease; /* Add a transition for box-shadow */
 }
 
 .BottomFrame {

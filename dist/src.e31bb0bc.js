@@ -28961,29 +28961,50 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function App() {
+  //-----vars:
   var _useState = (0, _react.useState)(0),
     _useState2 = _slicedToArray(_useState, 2),
     num = _useState2[0],
-    setNum = _useState2[1];
-  var generateNumber = function generateNumber() {
-    var NumberArea = document.querySelector(".NumberArea");
-    var randomNumber = Math.floor(Math.random() * 100) + 1;
-    setNum(randomNumber);
+    setNum = _useState2[1]; //Used to keep track of random number generated.
 
-    // Add the 'shadowed' class to trigger the transition
+  //--------------------------------
+  //Functions:
+  var generateNumber = function generateNumber() {
+    //This function will generate a random number to be shown on screen.
+    var NumberArea = document.querySelector(".NumberArea");
+    var Numb = document.querySelector(".randomNumber"); //grab number area.
+
+    var randomNumber = Math.floor(Math.random() * 100) + 1; //generate a random number
+    setNum(randomNumber);
+    if (Numb.classList.contains("fade")) {
+      //If the function is already running, then end here.
+      return;
+    }
+
+    //Fade/Shadow effects (ADD):
+    Numb.classList.add("fade");
     NumberArea.classList.add("shadowed");
+
+    // Remove the 'fade' class after the transition completes
+    setTimeout(function () {
+      Numb.classList.remove("fade");
+    }, 900);
 
     // Remove the 'shadowed' class after the transition completes
     setTimeout(function () {
       NumberArea.classList.remove("shadowed");
-    }, 1000);
+    }, 1100);
   };
+
+  //----return:
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "wrapper",
     className: "App"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "NumberArea"
-  }, /*#__PURE__*/_react.default.createElement("p", null, num)), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "randomNumber"
+  }, num)), /*#__PURE__*/_react.default.createElement("div", {
     className: "ButtonHolder"
   }, /*#__PURE__*/_react.default.createElement("button", {
     className: "GenerateButton",
@@ -28992,6 +29013,8 @@ function App() {
     className: "BottomFrame"
   }, /*#__PURE__*/_react.default.createElement("p", null, "Click the button above to generate a random number")));
 }
+
+//----------------------[Exports]:
 var _default = exports.default = App;
 },{"react":"../node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";
@@ -29042,7 +29065,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62609" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49208" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
