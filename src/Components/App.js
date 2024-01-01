@@ -1,26 +1,44 @@
 import React, { useState } from "react";
 
 function App() {
-  const [num, setNum] = useState(0);
+  //-----vars:
+  const [num, setNum] = useState(0); //Used to keep track of random number generated.
 
+  //--------------------------------
+  //Functions:
   const generateNumber = () => {
+    //This function will generate a random number to be shown on screen.
     const NumberArea = document.querySelector(".NumberArea");
-    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    const Numb = document.querySelector(".randomNumber"); //grab number area.
+
+    const randomNumber = Math.floor(Math.random() * 100) + 1; //generate a random number
     setNum(randomNumber);
 
-    // Add the 'shadowed' class to trigger the transition
+    if (Numb.classList.contains("fade")) {
+      //If the function is already running, then end here.
+      return;
+    }
+
+    //Fade/Shadow effects (ADD):
+    Numb.classList.add("fade");
     NumberArea.classList.add("shadowed");
+
+    // Remove the 'fade' class after the transition completes
+    setTimeout(() => {
+      Numb.classList.remove("fade");
+    }, 900);
 
     // Remove the 'shadowed' class after the transition completes
     setTimeout(() => {
       NumberArea.classList.remove("shadowed");
-    }, 1000);
+    }, 1100);
   };
 
+  //----return:
   return (
     <div id="wrapper" className="App">
       <div className="NumberArea">
-        <p>{num}</p>
+        <p className="randomNumber">{num}</p>
       </div>
       <div className="ButtonHolder">
         <button className="GenerateButton" onClick={generateNumber}>
@@ -34,4 +52,5 @@ function App() {
   );
 }
 
+//----------------------[Exports]:
 export default App;
