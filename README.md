@@ -3,3 +3,4 @@ A simple application that will generate a random number when a button is clicked
 
 ![image](https://github.com/TylrPopcorn/Random-Number-Generator/assets/104395322/26376e63-b06a-47dd-a64f-c21cdc63412f)
 
+Credit goes to the original/external sources used.
