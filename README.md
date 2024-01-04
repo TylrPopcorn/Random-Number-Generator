@@ -21,7 +21,7 @@ Utilized the use of HTML, React, JavaScript, and CSS to design a user-friendly r
 <br>
 <br>
 
-                                       Click the 'Generate' button to generate a number.
+                                    Click the 'Generate' button to generate a number.
 
  <img width="692" alt="Screenshot 2024-01-04 at 2 13 46 PM" src="https://github.com/TylrPopcorn/Random-Number-Generator/assets/104395322/8727341b-0718-4137-bef7-301f6a879858">
 
