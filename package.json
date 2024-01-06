@@ -1,4 +1,5 @@
 {
+  
   "name": "random-number-generator",
   "version": "1.0.0",
   "description": "A simple application that will generate a random number when a button is clicked on. lol.",
