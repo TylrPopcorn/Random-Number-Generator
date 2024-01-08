@@ -28976,7 +28976,7 @@ function App() {
 
     var randomNumber = Math.floor(Math.random() * 100) + 1; //generate a random number
     setNum(randomNumber);
-    if (Numb.classList.contains("fade")) {
+    if (NumberArea.classList.contains("shadowed") || Numb.classList.contains("fade")) {
       //If the function is already running, then end here.
       return;
     }
@@ -29065,7 +29065,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49208" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50233" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
