@@ -29,3 +29,5 @@ Utilized the use of HTML, React, JavaScript, and CSS to design a user-friendly r
 <sup>Created using React.js</sup>
 <br>
 <sup>Credit goes to the original/external sources used.</sup>
+
+Check out another version: https://github.com/TylrPopcorn/Random-Word-Generator
