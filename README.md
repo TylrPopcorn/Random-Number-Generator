@@ -34,4 +34,5 @@ Click the 'Generate' button to generate a random number between 1 and 100.
 
 -----
 # Related Projects
-Check out another version: https://github.com/TylrPopcorn/Random-Word-Generator
+-  [Random Word Generator](https://github.com/TylrPopcorn/Random-Word-Generator) - *Generate a random word*
+
