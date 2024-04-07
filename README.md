@@ -28,11 +28,12 @@ Click the 'Generate' button to generate a random number between 1 and 100.
 
  <img width="692" alt="Screenshot 2024-01-04 at 2 13 46 PM" src="https://github.com/TylrPopcorn/Random-Number-Generator/assets/104395322/8727341b-0718-4137-bef7-301f6a879858">
 
+ https://github.com/TylrPopcorn/Random-Number-Generator/assets/104395322/dff9f797-5a85-411b-b110-7736690819ad
  
-<br>
 <sup>Credit goes to the original/external sources used.</sup>
 
 -----
 # Related Projects
 -  [Random Word Generator](https://github.com/TylrPopcorn/Random-Word-Generator) - *Generate a random word*
+-  [Random Letter Generator](https://github.com/TylrPopcorn/Random-Letter-Generator) - *Generate a random letter*
 
